@@ -6,6 +6,9 @@ const root = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   // Static site only. Served from the domain root on Cloudflare Pages.
+  // The empty plugins array is intentional: Cloudflare's Wrangler setup
+  // adds its Vite plugin here during deploy, and it fails without one.
+  plugins: [],
   build: {
     outDir: 'dist',
     emptyOutDir: true,
