@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotate PDF Online — Rotate, Delete and Reorder PDF Pages, Free</title>
+  <meta name="description" content="Rotate PDF pages for free: fix sideways pages, delete pages you do not need, and reorder them with live previews. No uploads, no limits. Your files never leave your browser.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230e7490'/%3E%3Ctext x='16' y='21' font-family='Arial,sans-serif' font-size='13' font-weight='bold' fill='white' text-anchor='middle'%3EPDF%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="/"><span class="logo-mark">PDF</span><span class="logo-text">PDF Tools</span></a>
+      <nav class="main-nav" aria-label="Tools">
+        <a href="/merge-pdf/" data-tool="/merge-pdf">Merge</a>
+        <a href="/split-pdf/" data-tool="/split-pdf">Split</a>
+        <a href="/compress-pdf/" data-tool="/compress-pdf">Compress</a>
+        <a href="/jpg-to-pdf/" data-tool="/jpg-to-pdf">JPG to PDF</a>
+        <a href="/rotate-pdf/" data-tool="/rotate-pdf">Rotate</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="tool-hero">
+      <h1>Rotate PDF</h1>
+      <p class="lede">Fix sideways pages, delete the ones you do not need, and put the rest in the right order — with a live preview of every page. Your files never leave your browser.</p>
+    </section>
+
+    <section class="workspace" aria-label="Rotate PDF tool">
+      <div class="dropzone" id="dropzone" role="button" tabindex="0" aria-label="Add a PDF file">
+        <strong>Drop your PDF here</strong>
+        or click to choose a file from your device
+        <div class="hint">One PDF at a time &middot; processed on your device, never uploaded</div>
+        <input type="file" id="file-input" accept="application/pdf,.pdf">
+      </div>
+
+      <p id="file-info" style="color: var(--muted); font-size: 0.95rem; margin-top: 14px; display: none;"></p>
+
+      <div class="progress-wrap" id="progress-wrap">
+        <div class="progress-label" id="progress-label">Working…</div>
+        <div class="progress-bar"><div id="progress-bar"></div></div>
+      </div>
+
+      <div class="page-grid" id="page-grid"></div>
+
+      <div class="controls" style="margin-top: 22px;">
+        <button class="btn btn-primary" id="save-btn" type="button" disabled>Download PDF</button>
+        <button class="btn btn-secondary" id="clear-btn" type="button" disabled>Clear</button>
+      </div>
+
+      <div class="result" id="result" role="status"></div>
+    </section>
+
+    <section class="section">
+      <h2>How to rotate and organise PDF pages</h2>
+      <div class="howto">
+        <ol>
+          <li><strong>Add your PDF</strong> — drag it into the box above, or click to browse. A preview of every page appears below.</li>
+          <li><strong>Rotate</strong> — use the curved arrows under a page to turn it left or right in 90&deg; steps.</li>
+          <li><strong>Reorder or delete</strong> — use the side arrows to move a page, or the &times; button to remove it (click again to bring it back).</li>
+          <li><strong>Click "Download PDF"</strong> — the organised document downloads straight to your device.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Frequently asked questions</h2>
+      <div class="faq">
+        <details>
+          <summary>Can I rotate only one page?</summary>
+          <p>Yes. Every page has its own rotate buttons, so you can turn a single sideways page and leave the rest untouched.</p>
+        </details>
+        <details>
+          <summary>If I delete a page by mistake, can I get it back?</summary>
+          <p>Yes. Click the restore button on the removed page (it appears greyed out) and it comes back. Nothing is final until you download.</p>
+        </details>
+        <details>
+          <summary>Does rotating change the quality?</summary>
+          <p>No. Rotation only changes the page's orientation setting — the content itself is not re-drawn, so quality stays exactly the same.</p>
+        </details>
+        <details>
+          <summary>Are my files uploaded to a server?</summary>
+          <p>No. Everything happens entirely in your browser, on your device. Your files are never sent anywhere.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <strong>PDF Tools</strong> — free PDF tools that run entirely in your browser.<br>
+        Built with <a href="https://pdf-lib.js.org/" rel="noopener">pdf-lib</a> and <a href="https://mozilla.github.io/pdf.js/" rel="noopener">PDF.js</a> (open source, MIT licence). No tracking, no accounts.
+      </div>
+      <nav aria-label="Tools">
+        <a href="/merge-pdf/">Merge PDF</a>
+        <a href="/split-pdf/">Split PDF</a>
+        <a href="/compress-pdf/">Compress PDF</a>
+        <a href="/jpg-to-pdf/">JPG to PDF</a>
+        <a href="/rotate-pdf/">Rotate PDF</a>
+      </nav>
+      <div>&copy; <span data-year>2026</span> PDF Tools</div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/tools/rotate.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Split PDF Online — Extract Pages or Split a PDF Into Parts, Free</title>
+  <meta name="description" content="Split a PDF for free: extract the pages you need, split every few pages, or save each page as its own PDF. No uploads, no limits, no sign-up. Your files never leave your browser.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230e7490'/%3E%3Ctext x='16' y='21' font-family='Arial,sans-serif' font-size='13' font-weight='bold' fill='white' text-anchor='middle'%3EPDF%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="/"><span class="logo-mark">PDF</span><span class="logo-text">PDF Tools</span></a>
+      <nav class="main-nav" aria-label="Tools">
+        <a href="/merge-pdf/" data-tool="/merge-pdf">Merge</a>
+        <a href="/split-pdf/" data-tool="/split-pdf">Split</a>
+        <a href="/compress-pdf/" data-tool="/compress-pdf">Compress</a>
+        <a href="/jpg-to-pdf/" data-tool="/jpg-to-pdf">JPG to PDF</a>
+        <a href="/rotate-pdf/" data-tool="/rotate-pdf">Rotate</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap wrap-narrow">
+    <section class="tool-hero">
+      <h1>Split PDF</h1>
+      <p class="lede">Take the pages you need out of a PDF. Extract a range of pages into one file, split the document into equal parts, or save every page as its own PDF. Your files never leave your browser.</p>
+    </section>
+
+    <section class="workspace" aria-label="Split PDF tool">
+      <div class="dropzone" id="dropzone" role="button" tabindex="0" aria-label="Add a PDF file">
+        <strong>Drop your PDF here</strong>
+        or click to choose a file from your device
+        <div class="hint">One PDF at a time &middot; processed on your device, never uploaded</div>
+        <input type="file" id="file-input" accept="application/pdf,.pdf">
+      </div>
+
+      <p id="file-info" style="color: var(--muted); font-size: 0.95rem; margin-top: 14px; display: none;"></p>
+
+      <div class="field">
+        <label>How do you want to split it?</label>
+        <div class="radio-cards">
+          <div class="radio-card">
+            <input type="radio" name="split-mode" id="mode-ranges" value="ranges" checked>
+            <label for="mode-ranges"><strong>Extract pages</strong><span>Pick pages or ranges, get one PDF</span></label>
+          </div>
+          <div class="radio-card">
+            <input type="radio" name="split-mode" id="mode-every" value="every">
+            <label for="mode-every"><strong>Split every N pages</strong><span>Break the PDF into equal parts</span></label>
+          </div>
+          <div class="radio-card">
+            <input type="radio" name="split-mode" id="mode-each" value="each">
+            <label for="mode-each"><strong>Each page separately</strong><span>One PDF per page, packed in a ZIP</span></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="field" id="ranges-field">
+        <label for="ranges-input">Pages to extract</label>
+        <input type="text" id="ranges-input" placeholder="Example: 1-3, 5, 7-9" autocomplete="off">
+        <div class="field-help">Use numbers and ranges, separated by commas. Page 1 is the first page.</div>
+      </div>
+
+      <div class="field" id="every-field" style="display: none;">
+        <label for="every-input">Pages per part</label>
+        <input type="number" id="every-input" min="1" value="1" style="max-width: 140px;">
+        <div class="field-help">For example, "2" splits a 10-page PDF into 5 files of 2 pages each.</div>
+      </div>
+
+      <div class="controls">
+        <button class="btn btn-primary" id="split-btn" type="button" disabled>Split PDF</button>
+        <button class="btn btn-secondary" id="clear-btn" type="button" disabled>Clear</button>
+      </div>
+
+      <div class="progress-wrap" id="progress-wrap">
+        <div class="progress-label" id="progress-label">Working…</div>
+        <div class="progress-bar"><div id="progress-bar"></div></div>
+      </div>
+
+      <div class="result" id="result" role="status"></div>
+    </section>
+
+    <section class="section">
+      <h2>How to split a PDF</h2>
+      <div class="howto">
+        <ol>
+          <li><strong>Add your PDF</strong> — drag it into the box above, or click to browse.</li>
+          <li><strong>Choose a mode</strong> — extract specific pages ("1-3, 5"), split every few pages, or take every page separately.</li>
+          <li><strong>Click "Split PDF"</strong> — the new file (or ZIP of files) downloads straight to your device.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Frequently asked questions</h2>
+      <div class="faq">
+        <details>
+          <summary>How do I write the pages I want?</summary>
+          <p>Use page numbers with commas and dashes, for example "1-3, 5, 7-9" means pages 1, 2, 3, 5, 7, 8 and 9. Page 1 is the first page of the document.</p>
+        </details>
+        <details>
+          <summary>What do I get when I split into many parts?</summary>
+          <p>You get one PDF per part, packed together in a single ZIP file so you only download once. Unzip it to get the individual files.</p>
+        </details>
+        <details>
+          <summary>Does splitting change the pages?</summary>
+          <p>No. Splitting only copies pages — the text, images and formatting of each page stay exactly as they were.</p>
+        </details>
+        <details>
+          <summary>Are my files uploaded to a server?</summary>
+          <p>No. Splitting happens entirely in your browser, on your device. Your files are never sent anywhere.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <strong>PDF Tools</strong> — free PDF tools that run entirely in your browser.<br>
+        Built with <a href="https://pdf-lib.js.org/" rel="noopener">pdf-lib</a> and <a href="https://mozilla.github.io/pdf.js/" rel="noopener">PDF.js</a> (open source, MIT licence). No tracking, no accounts.
+      </div>
+      <nav aria-label="Tools">
+        <a href="/merge-pdf/">Merge PDF</a>
+        <a href="/split-pdf/">Split PDF</a>
+        <a href="/compress-pdf/">Compress PDF</a>
+        <a href="/jpg-to-pdf/">JPG to PDF</a>
+        <a href="/rotate-pdf/">Rotate PDF</a>
+      </nav>
+      <div>&copy; <span data-year>2026</span> PDF Tools</div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/tools/split.js"></script>
+</body>
+</html>

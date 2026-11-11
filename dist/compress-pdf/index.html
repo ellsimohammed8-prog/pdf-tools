@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compress PDF Online — Reduce PDF File Size, Free</title>
+  <meta name="description" content="Compress a PDF for free and make it small enough for email and upload forms. Choose a quality preset, see the before/after size. No uploads, no limits. Your files never leave your browser.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230e7490'/%3E%3Ctext x='16' y='21' font-family='Arial,sans-serif' font-size='13' font-weight='bold' fill='white' text-anchor='middle'%3EPDF%3C/text%3E%3C/svg%3E">
+  <script type="module" crossorigin src="/assets/compress-sdoJbcn1.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/main-CJ5-aEY7.js">
+  <link rel="modulepreload" crossorigin href="/assets/pdf-tools-Cz8PRcE8.js">
+  <link rel="modulepreload" crossorigin href="/assets/pdfjs-Q2hiD8pZ.js">
+  <link rel="stylesheet" crossorigin href="/assets/main-DJZFjo3f.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="/"><span class="logo-mark">PDF</span><span class="logo-text">PDF Tools</span></a>
+      <nav class="main-nav" aria-label="Tools">
+        <a href="/merge-pdf/" data-tool="/merge-pdf">Merge</a>
+        <a href="/split-pdf/" data-tool="/split-pdf">Split</a>
+        <a href="/compress-pdf/" data-tool="/compress-pdf">Compress</a>
+        <a href="/jpg-to-pdf/" data-tool="/jpg-to-pdf">JPG to PDF</a>
+        <a href="/rotate-pdf/" data-tool="/rotate-pdf">Rotate</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap wrap-narrow">
+    <section class="tool-hero">
+      <h1>Compress PDF</h1>
+      <p class="lede">Make a PDF smaller so it fits email attachments and upload forms. Pick a preset, compress, and see exactly how much you saved. Your files never leave your browser.</p>
+    </section>
+
+    <section class="workspace" aria-label="Compress PDF tool">
+      <div class="notice">
+        <strong>Please read this first:</strong> compression here turns each page into an image. That means text in the compressed file can no longer be selected, copied or searched — it is a picture of the page. It works best on scanned or image-heavy PDFs. A PDF that is mostly text may barely shrink, and that is normal.
+      </div>
+
+      <div class="dropzone" id="dropzone" role="button" tabindex="0" aria-label="Add a PDF file">
+        <strong>Drop your PDF here</strong>
+        or click to choose a file from your device
+        <div class="hint">One PDF at a time &middot; processed on your device, never uploaded</div>
+        <input type="file" id="file-input" accept="application/pdf,.pdf">
+      </div>
+
+      <p id="file-info" style="color: var(--muted); font-size: 0.95rem; margin-top: 14px; display: none;"></p>
+
+      <div class="field">
+        <label>Quality preset</label>
+        <div class="radio-cards">
+          <div class="radio-card">
+            <input type="radio" name="preset" id="preset-small" value="small">
+            <label for="preset-small"><strong>Smallest file</strong><span>Lowest quality, biggest saving</span></label>
+          </div>
+          <div class="radio-card">
+            <input type="radio" name="preset" id="preset-medium" value="medium" checked>
+            <label for="preset-medium"><strong>Balanced</strong><span>Good quality, good saving</span></label>
+          </div>
+          <div class="radio-card">
+            <input type="radio" name="preset" id="preset-high" value="high">
+            <label for="preset-high"><strong>Best quality</strong><span>Sharp pages, smaller saving</span></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="quality-slider">Image quality: <span id="quality-value">65%</span></label>
+        <input type="range" id="quality-slider" min="30" max="95" value="65" step="5">
+        <div class="field-help">Lower quality means a smaller file. Higher quality keeps pages sharper.</div>
+      </div>
+
+      <div class="controls">
+        <button class="btn btn-primary" id="compress-btn" type="button" disabled>Compress PDF</button>
+        <button class="btn btn-secondary" id="clear-btn" type="button" disabled>Clear</button>
+      </div>
+
+      <div class="progress-wrap" id="progress-wrap">
+        <div class="progress-label" id="progress-label">Working…</div>
+        <div class="progress-bar"><div id="progress-bar"></div></div>
+      </div>
+
+      <div class="result" id="result" role="status"></div>
+    </section>
+
+    <section class="section">
+      <h2>How to compress a PDF</h2>
+      <div class="howto">
+        <ol>
+          <li><strong>Add your PDF</strong> — drag it into the box above, or click to browse.</li>
+          <li><strong>Choose a preset</strong> — "Smallest file" for the tiniest result, "Balanced" for everyday use, or "Best quality" when sharpness matters. You can fine-tune with the quality slider.</li>
+          <li><strong>Click "Compress PDF"</strong> — each page is rebuilt as an image, on your device.</li>
+          <li><strong>Check the report</strong> — you will see the old size, the new size, and how much you saved, then download the file.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Frequently asked questions</h2>
+      <div class="faq">
+        <details>
+          <summary>Why did my PDF barely shrink?</summary>
+          <p>Compression works by turning pages into images. If your PDF is mostly text, the original file is already small and efficient — turning its pages into images can even make it bigger. The tool works best on scanned documents and PDFs full of photos.</p>
+        </details>
+        <details>
+          <summary>Can I still select or search text after compression?</summary>
+          <p>No. After compression, each page is an image, so text can no longer be selected, copied or searched. Keep your original file if you need the text later.</p>
+        </details>
+        <details>
+          <summary>Which preset should I choose?</summary>
+          <p>For forms and email attachments, "Balanced" is usually right. Use "Smallest file" when a form has a strict size limit, and "Best quality" when the PDF will be printed or read closely.</p>
+        </details>
+        <details>
+          <summary>Are my files uploaded to a server?</summary>
+          <p>No. Compression happens entirely in your browser, on your device. Your files are never sent anywhere.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <strong>PDF Tools</strong> — free PDF tools that run entirely in your browser.<br>
+        Built with <a href="https://pdf-lib.js.org/" rel="noopener">pdf-lib</a> and <a href="https://mozilla.github.io/pdf.js/" rel="noopener">PDF.js</a> (open source, MIT licence). No tracking, no accounts.
+      </div>
+      <nav aria-label="Tools">
+        <a href="/merge-pdf/">Merge PDF</a>
+        <a href="/split-pdf/">Split PDF</a>
+        <a href="/compress-pdf/">Compress PDF</a>
+        <a href="/jpg-to-pdf/">JPG to PDF</a>
+        <a href="/rotate-pdf/">Rotate PDF</a>
+      </nav>
+      <div>&copy; <span data-year>2026</span> PDF Tools</div>
+    </div>
+  </footer>
+
+</body>
+</html>
